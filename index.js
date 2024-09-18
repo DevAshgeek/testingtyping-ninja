@@ -223,6 +223,7 @@ function focusKeyboard() {
 document.getElementById("game").addEventListener('touchstart', (e) => {
     e.preventDefault();  // Prevent default behavior to ensure focus
     focusKeyboard();
+     handleEvent({ key: '' }); 
     if (!document.querySelector("#game.over")) {
         handleEvent({ key: '' });  // Trigger a dummy event to start the game
     }
